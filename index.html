@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Iconographie des corrélations</title>
+
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="jquery.cookie.js"></script>
+        <script src="lodash.js"></script>
+        <script src="statistiques.js"></script>
+        <script src="variables.js"></script>
+        <script src="arrayToTable.js"></script>
+        <script src="script.js"></script>
+        <script src="simple-graph.js"></script>
+        <link href="style.css" rel="stylesheet" />
+        
+    </head>
+    <body>
+        <div class="left_column">
+            <div id="manuel" class="bloc">
+                <h2>Utilisation</h2>
+                <p>
+                    Sur le graphe de force
+                </p>
+                <ul>
+                    <li>Cliquer sur une bulle affiche la densité de la variable</li>
+                    <li>Cliquer sur une liaison affiche un graphe de points de tous les abonnés</li>
+                </ul>
+                <p>
+                    Sur le graphe de densité, sélectionner la zone intéressante pour voir le nombre de personnes concernées
+                </p>
+                <p>
+                    Cliquer sur "problèmes" prendra du temps
+                </p>
+                <p>
+                    Cliquer sur "Multi-dimensionnel" prendra beaucoup de temps et empêchera le reste de fonctionner
+                </p>
+            </div> 
+            <div id="svg" class="bloc"></div>
+            <div id="chart" class="bloc"></div>
+            <div id="multi" class="bloc">
+                <h2>Graphe Multi-dimensionnel</h2><button onclick="scatterPlot(['network_disconnected','bad_signal_quality','zap'])">Afficher</button><span> (very computationally intensive)</span>
+                <div id="scatter"></div>
+            </div>
+            <div id="logs" class="bloc">
+                <h2>Les Problèmes</h2><button id="compute_problems">Trouver plein de problèmes</button>
+            </div>
+        </div>
+        <div class="right_column">
+            <div class="bloc interactive">
+                <h2>Noeud : </h2><span id="noeud"></span><br>
+                <button id="remove_node">Enlever l'influence du noeud</button><br>
+                <input type="checkbox" id="isolate" checked>Isoler le noeud<br>
+                <span id="skipped_nodes"></span><br>
+
+                <h2>Corrélation : </h2><span id="correlation"></span><br>
+                <button id="remove_link">Enlever le lien</button>
+                <button id="clear_skipped_links">Vider la liste</button>
+                <button id="plot">Représenter les données</button><br>
+                <span id="skipped_links"></span><br>
+
+                <h2>Seuil : </h2>
+                <input type="range" id="seuil" min="0" max="1" step="0.01" value="0">  <span id="seuil_span">0</span><br>
+
+                <h2>Charge : </h2>
+                <input type="range" id="charge" min="-1500" max="0" step="10" value="-700">  <span id="charge_span">-700</span><br>
+                <h2>Msd :</h2><span id="msd"></span><br>
+                <button id="compute_problems">Trouver les msd à problèmes</button><br>
+            </div>
+
+            <div class="reclus bloc interactive">
+                <p><span id="k_msd">0</span><span> msd sélectionnés sur </span><span id="n_msd">0</span><br>
+                <span>Intégrale : </span><span id="integrale"></span></p>
+
+                <table id="selected_msds">
+                    
+                </table>
+            </div>
+        </div>
+        
+        
+        <div class="bloc iframe">
+            <iframe src="https://logsr7.canallabs.fr/#msdfocus"></iframe>
+        </div>
+        <div class="bloc matrice">
+            <table>
+                
+            </table>
+        </div>
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

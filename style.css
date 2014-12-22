@@ -1,0 +1,225 @@
+body{
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Futura;
+    src: url('CanalLightRomain2012.otf');
+}
+
+.left_column{
+    width: 70%;
+    left: 0;
+    top: 0;
+}
+.left_column div{
+    width: 900px;
+}
+.right_column{
+    width: 20%;
+    position: absolute;
+    left: 936px;
+    top: 338px;
+}
+
+
+svg{
+    
+}
+path.link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+circle {
+  /*fill: red;*/
+  fill-opacity: 0.5;
+  stroke-width: 0.5px;
+}
+
+text {
+    stroke: #323232;
+    font-weight: normal;
+    stroke-width: .5;
+    font-size: 14px;
+    fill: black;
+}
+
+.link {
+    stroke: rgba(46, 46, 46, 0.52);
+    stroke-width: 4px;
+    transition: 0.3s;
+    stroke-linecap: round;
+}
+.link:hover{
+    stroke: #868686;
+    stroke-width: 8px;
+}
+.textClass {
+    stroke: #323232;
+    font-weight: normal;
+    stroke-width: .5;
+    font-size: 14px;
+}
+#svg{
+
+}
+.bloc{
+    display: inline-block;
+    margin: 1em;
+    box-shadow: 0 0 66px rgb(218, 218, 218);
+}
+.interactive{
+    vertical-align: top;
+    width: 20em;
+    min-height: 37.55em;
+    font-family: Helvetica;
+    padding: 1em;
+    max-height: 47.5em;
+    overflow: hidden;
+}
+h2{
+    display: inline-block;
+    margin: 0.5em;
+    font-weight: normal;
+    font-family: Futura;
+    font-size: 17pt;
+}
+button {
+    text-align: center;
+}
+#multi, #manuel, #logs{
+    padding: 1.5em;
+}
+.matrice {
+    max-width: 96%;
+    overflow: auto;
+    padding: 1em;
+}
+.matrice td {
+    max-width: 3em;
+    min-width: 3em;
+    height: 3em;
+    overflow: hidden;
+    font-size: x-small;
+    text-align: center;
+}
+
+.one{
+    background-color: lightgreen;
+}
+.mone{
+    background-color: red;
+}
+
+.overlay{
+    fill: white;
+}
+.axis{
+    fill: transparent;
+}
+
+.iframe{
+    width: 100%;
+    margin: 1em 0;
+}
+iframe{
+    width: 100%;
+    border: none;
+    height: 60em;
+}
+.density{
+    stroke:black;
+}
+
+.reclus td {
+    height: 2em;
+    overflow: hidden;
+    text-align: right;
+    width: 15em;
+}
+.reclus p{
+    text-align: right;
+}
+.reclus table{
+    overflow-x: auto;
+    max-height: 38.55em;
+    display: block;
+}
+
+#logs{
+    padding: 1.5em;
+    width: 1100px;
+}
+#scatter{
+
+}
+
+.extent {
+    fill: #000;
+    fill-opacity: .125;
+    stroke: #fff;
+}
+circle.hidden {
+  fill: #ccc !important;
+}
+
+.axis,
+.frame {
+  shape-rendering: crispEdges;
+}
+.frame {
+    fill: none;
+    stroke: #aaa;
+}
+.brush .extent {
+  stroke: #fff;
+  fill-opacity: .125;
+  shape-rendering: crispEdges;
+}
+#n_msd, #k_msd, #integrale {
+    font-family: Futura;
+    font-size: 15pt;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
